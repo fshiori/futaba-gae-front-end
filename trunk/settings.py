@@ -8,3 +8,6 @@ config['DESCRIPTION'] = u'台灣以動漫畫、遊戲為主題的Futaba 風格�
 config['TITLE'] = u'futaba FE'
 config['ADULT_PIC'] = '' #限制級LOGO位置
 config['LEAVE_URL'] = 'http://www.yahoo.com/' #不同意離開的URL
+
+config['MEMCAHCE_ENABLE'] = True
+config['MEMCACHE_EXPIRES'] = 3600 #sec

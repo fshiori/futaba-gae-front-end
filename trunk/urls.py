@@ -9,5 +9,6 @@ routes = [
     (r'/mainmenu/', 'main.MotdPage'),
     (r'/bbsmenu/', 'main.MenuPage'),
     (r'^(/admin)(.*)$', appengine_admin.Admin),
+    (r'/clear_cache/', 'main.ClearCachePage'),
 ]
 
