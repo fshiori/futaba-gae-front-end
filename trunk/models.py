@@ -29,8 +29,8 @@ class Category(db.Model):
     enable = db.BooleanProperty(required=True, default=True)
     create_time = db.DateTimeProperty(auto_now_add=True)
 
-    def __str__(self):
-        return str(self.title)
+    def __unicode__(self):
+        return self.title
     
     def get_board(self):
         q = Board.all()

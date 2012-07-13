@@ -9,12 +9,12 @@ from google.appengine.ext import webapp
 from google.appengine.api import datastore_errors
 from google.appengine.ext.webapp import template
 
-from . import authorized
-from . import utils
-from . import admin_settings
-from . import model_register
-from .model_register import getModelAdmin
-from .utils import Http404, Http500
+import authorized
+import utils
+import admin_settings
+import model_register
+from model_register import getModelAdmin
+from utils import Http404, Http500
 
 ADMIN_TEMPLATE_DIR = admin_settings.ADMIN_TEMPLATE_DIR
 ADMIN_ITEMS_PER_PAGE = admin_settings.ADMIN_ITEMS_PER_PAGE

@@ -11,9 +11,9 @@ except ImportError:
     except ImportError:
         from django.utils.encoding import smart_unicode
 
-from . import admin_forms
-from . import utils
-from .utils import Http404
+import admin_forms
+import utils
+from utils import Http404
 
 class PropertyWrapper(object):
     def __init__(self, prop, name):

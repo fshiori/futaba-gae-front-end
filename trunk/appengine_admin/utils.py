@@ -5,7 +5,7 @@ import pickle
 import logging
 import math
 
-from . import admin_settings
+import admin_settings
 
 def getBlobProperties(item, fieldName):
     props = getattr(item, fieldName + admin_settings.BLOB_FIELD_META_SUFFIX, None)
