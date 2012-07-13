@@ -14,9 +14,9 @@ def _debug_flatpage():
     board = Board(category=category, name='Test', link='http://www.yahoo.com.tw')
     board.put()
 
-def get_flatpage(name):
+def get_flatpage(title):
     q = Flatpage.all()
-    res = q.filter('name =', name).get()
+    res = q.filter('title =', title).get()
     if res:
         return res.content
     return

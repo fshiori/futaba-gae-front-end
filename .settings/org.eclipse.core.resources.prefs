@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//google_appengine/lib/webapp2/webapp2.py=utf-8
 encoding/handler.py=utf-8
 encoding/main.py=utf-8
 encoding/models.py=utf-8
