@@ -1,0 +1,24 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>{{config.TITLE}} Menu</title>
+<base target="cont">
+</head>
+
+<body text="#cc0000" bgcolor="#ffffee" alink="#ff0099" vlink="#003333">
+<h3>{{config.TITLE}}</h3>
+<font size="2">
+{% for category in categorys %}
+{% if category.tag %}
+<a name="{{category.tag}}"></a>
+{% endif %}
+<b>{{category.name}}</b><br>
+{% for board in category.get_board() %}
+<a href="{{board.link}}" {% if board.target == "_blank" %}target="_blank"{% elif board.target == "tag" %}target="menu"{% endif %}>{{board.name}}</a>{% if board.tag %}<font color="#FF0099" size="-1"> {{board.tag}}</font>{% endif %}<br>
+{% endfor %}
+<br>
+{% endfor %}
+</font>
+
+</body>
+</html>
