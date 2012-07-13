@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="keywords" content="{% for keyword in config.KEYWORDS %}{{keyword}}{% if not loop.last %}, {% endif %}{% endfor %}">
+<meta http-equiv="description" content="{{config.DESCRIPTION}}">
+{% include "pics-label.html" %}
+<title>{{config.TITLE}}</title>
+</head>
+<body text="#cc0000" bgcolor="#ffffee" alink="#ff0099" vlink="#003333">
+<center>
+<table width="80%" border="0">
+<tr><td align="center">
+{% if config.ADULT_PIC %}<img src="{{config.ADULT_PIC}}">{% endif %}
+<tr><td><br><font size="3"><b>
+歡迎來到 {{config.TITLE}} ，在使用本網站前，請注意下列規定：
+<ol>
+{% if content %}
+{{content|safe}}
+{% else %}
+{% include "default_motd.html" %}
+{% endif %}
+</ol>
+</font>
+<tr><td align="center">
+<br>
+<br><font size="5"><b><a href="/main/">進入</a>　<a href="{{config.LEAVE_URL}}">離開</a><br></b></font>
+</table>
+</center>
+<center>
+<br/>
+{% include "copyright.html" %}
+</center>
+{% include "footer.html" %}
+</body>
+</html>

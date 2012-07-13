@@ -1,0 +1,35 @@
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>{{config.TITLE}} Frontpage</title>
+<base target="cont">
+</head>
+
+<body text="#800000" bgcolor="#ffffee" alink="#ff0099" vlink="#003333">
+<center>
+<table width="80%" border="0">
+<tr><td align="center"><font size='2'>
+<br>
+
+<tr><td><br><font size="2">
+歡迎來到 {{config.TITLE}} ，在使用本網站前，請注意下列規定：
+<ol>
+{% if content %}
+{{content|safe}}
+{% else %}
+{% include "default_motd.html" %}
+{% endif %}
+</ol>
+</font>
+</table>
+
+<p>
+{% if config.ADULT_PIC %}<img src="{{config.ADULT_PIC}}">{% endif %}
+</center>
+<center>
+<br/>
+{% include "copyright.html" %}
+</center>
+</body>
+</html>
