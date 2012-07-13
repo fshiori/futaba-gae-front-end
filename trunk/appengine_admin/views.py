@@ -51,9 +51,9 @@ class Admin(BaseRequestHandler):
         2) url - admin site page url (without prefix) that is used for determining what
             action on what model user wants to make.
     """
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         logging.info("NEW Admin object created")
-        super(Admin, self).__init__()
+        super(Admin, self).__init__(*args, **kwargs)
         # Define and compile regexps for Admin site URL scheme.
         # Every URL will be mapped to appropriate method of this
         # class that handles all requests of particular HTTP message

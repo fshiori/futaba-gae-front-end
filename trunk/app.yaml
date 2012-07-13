@@ -7,6 +7,9 @@ threadsafe: true
 libraries:
 - name: jinja2
   version: latest
+
+- name: django
+  version: latest
   
 inbound_services:
 - warmup
@@ -19,5 +22,12 @@ handlers:
 - url: /statics
   static_dir: statics
   
+- url: /appengine_admin_media
+  static_dir: appengine_admin/media
+  secure: never
+  
 - url: /.*
   script: main.app
+  
+env_variables:
+  DJANGO_SETTINGS_MODULE: 'settings'
