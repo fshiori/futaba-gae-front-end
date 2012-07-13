@@ -6,8 +6,8 @@ ManyToManyProperty taken from http://django-gae-helpers.googlecode.com/svn/trunk
 from google.appengine.ext import db
 from google.appengine.api.datastore_errors import BadValueError
 
-from . import admin_forms
-from . import admin_widgets
+import admin_forms
+import admin_widgets
 
 class NotImplementedException(Exception):
     pass
